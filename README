@@ -1,0 +1,65 @@
+# 🖐️ My Hand Detection
+
+This project uses a **custom YOLOv8 model** for real-time **hand detection** and a **gesture classification model** (`gesture_model.pkl`).  
+It’s lightweight, fully independent from MediaPipe, and designed to be integrated into other AI or robotics projects.
+
+---
+
+## 🚀 Features
+- 🧠 YOLOv8-based hand detection
+- ✋ Custom gesture recognition using your own trained classifier
+- ⚡ Supports GPU acceleration (optional)
+- 🧩 Can be integrated into any Python project easily
+- 🧱 Modular scripts for collecting data, training, and running detection
+
+---
+
+## 📂 Project Structure
+LET8/
+├── collect_dataset.py # Collect gesture images for training
+├── check_dataset.py # Validate dataset structure
+├── train.py # Train YOLOv8 model
+├── run.py # Run real-time detection
+├── feature.py, easy.py, GPU.py, YOLO.py
+├── requirements.txt
+├── data.yaml # YOLO dataset configuration
+└── .gitignore
+
+
+---
+
+## 🧠 Model Files
+
+To run detection, download the pretrained models below:
+
+- 🧩 **YOLOv8 model** → [Download hand_yolov8n.pt](<YOUR_GOOGLE_DRIVE_LINK_HERE>)  
+- ✋ **Gesture classifier** → [Download gesture_model.pkl](<YOUR_GOOGLE_DRIVE_LINK_HERE>)
+
+After downloading, place both files in the project root (`LET8/`).
+
+---
+
+## 🧰 Installation
+
+```bash
+# (Optional) Create virtual environment
+python -m venv .venv
+source .venv/bin/activate   # or .venv\Scripts\activate on Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+python run.py
+python train.py
+
+from YOLO import HandDetector
+
+detector = HandDetector("hand_yolov8n.pt", "gesture_model.pkl")
+detector.run_camera()
+
+
+---
+
+Would you like me to make a **second section** for your README showing  
+how to **import it as a module** into your “other project” (e.g. sample integration code)?  
+It’ll make it look more polished for documentation and reusability.
