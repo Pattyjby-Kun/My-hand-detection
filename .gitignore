@@ -1,0 +1,47 @@
+# ========== Python ==========
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+*.db
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# ========== Datasets & Outputs ==========
+# YOLO and dataset outputs
+runs/
+archive/
+my_yolo_dataset/
+my_imgs/
+
+# CSV datasets
+*.csv
+
+# ========== Models & Weights ==========
+#*.pt
+*.pth
+#*.pkl
+*.onnx
+*.tflite
+
+# ========== Config & Cache ==========
+*.yaml
+.DS_Store
+*.bak
+*.tmp
+*.swp
+
+# ========== IDE / Editor ==========
+.vscode/
+.idea/
+*.code-workspace
+
+# ========== OS generated ==========
+Thumbs.db
+ehthumbs.db
+desktop.ini
